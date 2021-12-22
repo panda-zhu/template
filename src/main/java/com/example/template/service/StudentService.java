@@ -10,4 +10,5 @@ public interface StudentService {
     void deleteStudentById(Student student);
     void updateStudentById(Student student);
     Student queryStudentById(Student student);
+    String testException();
 }

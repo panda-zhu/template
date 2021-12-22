@@ -2,6 +2,8 @@ package com.example.template.service.impl;
 
 import com.example.template.dao.StudentMapper;
 import com.example.template.entity.Student;
+import com.example.template.enums.BusinessExCode;
+import com.example.template.exception.BusinessException;
 import com.example.template.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -39,5 +41,13 @@ public class StudentServiceImpl implements StudentService {
     public Student queryStudentById(Student student) {
         log.info("开始查询学生信息{}",student);
         return studentMapper.queryStudentById(student);
+    }
+
+    @Override
+    public String testException() {
+//        String a = null;
+//        a.equals("bn");
+            throw new BusinessException(BusinessExCode.DATABASE_NOT_FOUND);
+
     }
 }

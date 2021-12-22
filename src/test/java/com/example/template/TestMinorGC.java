@@ -17,8 +17,11 @@ public class TestMinorGC {
 //        allocation3 = new byte[2*_1MB];
         //当装载allocation4的时候，年轻代Eden区被占用了6M了，而survivor也提供不出来转移存2M大小对象的区域
         //所以只好通过分配担保机制提前转移到老年代去，这就需要出发MinorGC来实现了。
-        allocation4 = new byte[4*_1MB];
+//        allocation4 = new byte[4*_1MB];
+            int a[] = {1,2};
+            int s = a[3];
     }
+
     /*
     * -verbose:gc //在控制台输出GC情况
     * -Xms20M //设置JVM初始内存为20M。

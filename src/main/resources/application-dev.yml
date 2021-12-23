@@ -47,5 +47,11 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.template.entity
+
 #******************************************配置mybatis和druid结束**********************************************************
 
+
+
+logging:
+  file:
+    path: ./target/logs/
